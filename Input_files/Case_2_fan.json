@@ -1,0 +1,56 @@
+{
+  "param": {
+  "uw": 20,
+  "K0": 0.50,
+  "R": 1,
+  "fi": 25,
+  "attrac": 10,
+  "cohesion": "computed",
+
+  "SOCP": true,
+  "p": 200,
+  "solver": "ECOS",
+  "Su_solve": false,
+  "strength_reduction": false,
+  "optimize_body_forces": false,
+  "tension_cut_off": false
+},
+"mesh": {
+  "points": [
+    {"x": 0, "y": 0, "lc": 5},
+    {"x": 0, "y": -1.5, "lc": 5},
+    {"x": 0, "y": -10, "lc": 5},
+    {"x": 15, "y": -10, "lc": 5},
+    {"x": 15, "y": 0, "lc": 5},
+    {"x": 1.5, "y": 0, "lc": 5}
+  ],
+  "all_boundaries": [15, 14, 13, 12, 11, 17, 16, 8],
+  "vertical_bound": [12, 11, 17],
+  "horisontal_bound": [12, 13, 11, 17],
+  "inclined_bound": [],
+  "zero_shear_bound": [],
+  "surface": [8, 16, 17, 11],
+  "loaded_lines": [16, 8],
+
+  "show_mesh": true,
+  "mirrored": false,
+  
+  "amr": false,
+  "amr_repetitions": 1,
+  "amr_lc" : 2.4,
+  
+  "fan": true, 
+  "fan_center": [1.5, 0],
+  "fan_radius": 1.2,
+  "fan_discs": 3,
+  "fan_slices": 10,
+  "fan_lc_min": 0.2,
+  "fan_lc_max": 2
+},
+"results": {
+  "quick_view": true,
+  "make_VTK": true,
+  "save_VTK_as": "p_200",
+  "validate": false
+}
+}
